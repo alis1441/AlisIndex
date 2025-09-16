@@ -4,85 +4,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALIS (Акустическая песня) </title>
+  <title>ALIS (Акустическая песня)</title>
   <style>
     body {
+      /* background: url("res/back.png") no-repeat center center fixed; */
+      background: url("res/grid10N.bmp");
+      /* background-size: cover; */
       margin: 0;
       font-family: Arial, sans-serif;
-      /*  */
-      background: url("res/back.png") no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+      color: #00b5f1;
+      background-color: #00445b;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px 20px;
+      position: relative;
+      /* overflow: hidden; */
+      overflow: auto;
+      box-sizing: border-box;
     }
 
     .avatar {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 20px;
+      border: 3px solid #00b5f1;
+      /* Белый бордюр */
+      margin-top: 10px;
+      margin-bottom: 10px;
       background: url("res/av.png") center/cover no-repeat;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+      /* Тень вокруг аватара */
     }
 
     h1 {
       margin: 10px 0;
       font-size: 1.8em;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
     }
 
     p {
       margin: 5px 0 20px;
       font-size: 1em;
       opacity: 0.9;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     }
 
     .link {
       display: block;
+      /* Flexbox для выравнивания иконки и текста */
+      text-align: center;
       width: 90%;
-      max-width: 300px;
+      max-width: 150px;
       margin: 10px auto;
-      padding: 12px;
+      padding: 12px 12px 12px 20px;
+      /* Отступы внутри кнопки */
       border-radius: 8px;
+      border: 2px solid #00b5f1;
+      /* Полупрозрачный белый бордюр */
       background: rgba(0, 0, 0, 0.4);
-      color: white;
+      color: #00b5f1;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
-      backdrop-filter: blur(4px);
+      transition: background 0.3s, box-shadow 0.3s;
+      text-shadow: 2px 2px 5px black;
+      box-shadow: 2px 2px 5px black;
     }
 
     .link:hover {
       background: rgba(0, 0, 0, 0.6);
+      box-shadow: 2px 2px 2px black;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    .icon2 {
+      width: 48px;
+      height: 24px;
+      margin-right: 8px;
+      flex-shrink: 0;
+      vertical-align: middle;
     }
 
     footer {
-      margin-top: auto;
+      margin-top: 20px;
       opacity: 0.8;
-      font-size: 0.8em;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      font-size: 1em;
+      text-shadow: 2px 2px 2px black;
     }
   </style>
 </head>
 
 <body>
   <div class="avatar"></div>
-  <h1>ALIS</h1>
-  <p>(Акустическая песня)</p>
-
-  <a href="https://youtube.com/@alis_akpes" class="link">🔶 Канал YouTube 🔶</a>
-  <a href="https://vk.com/alis_akpes" class="link">🔷 VK Сообщество ВКонтакте 🔷</a>
-  <a href="https://t.me/alis_akpes" class="link">🔷 Канал Telegram 🔷</a>
+  <!-- <h1>ALIS (Акустическая песня)</h1> -->
+  <h1>
+    Акустическая песня
+  </h1>
+  <!-- stihi -->
+  <a href="https://stihi.ru/alis1441" class="link">
+    <img src="res/Stihi.jpg" class="icon2">Stihi.ru
+  </a>
+  <!-- telegram -->
+  <a href="https://t.me/alis1441" class="link">
+    <img src="res/Telegram.png" class="icon">Telegram
+  </a>
+  <!-- youtube -->
+  <a href="https://youtube.com/@alis1441" class="link">
+    <img src="res/Youtube.png" class="icon">YouTube
+  </a>
+  <!-- vk -->
+  <a href="https://vk.com/alis1441" class="link">
+    <img src="res/VK.png" class="icon">VKontakte</a>
+  <!-- mail -->
+  <script>
+    const user = "alis";
+    const domain = "alis1441.ru";
+    document.write('<a href="#" class="link" onclick="copyText(\'' + user + '@' + domain + '\')"> <img src="res/Mail.png" class="icon">E-mail</a>');
+  </script>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Адрес скопирован: " + text);
+      });
+    }
+  </script>
 
   <footer>
-    © 2025 ALIS
+    Алексей [ALIS] Лисицын, 2025
   </footer>
 </body>
 
