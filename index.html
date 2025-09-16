@@ -7,42 +7,52 @@
   <title>ALIS (Акустическая песня)</title>
   <style>
     body {
-      /* background: url("res/back.png") no-repeat center center fixed; */
-      background: url("res/grid10N.bmp");
-      /* background-size: cover; */
-      margin: 0;
-      font-family: Lucida Console, Arial, sans-serif;
-      color: #00b5f1;
-      background-color: #00445b;
       display: flex;
+      font-size: 1.3em;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+      /* Центрирование содержимого по вертикали */
       min-height: 100vh;
+      /* Высота страницы равна высоте окна браузера */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #00b5f1;
+      background: url("res/grid10N.bmp");
+      background-color: #00445b;
       text-align: center;
       padding: 1em;
-      position: relative;
-      /* overflow: hidden; */
-      overflow: auto;
       box-sizing: border-box;
+      overflow: auto;
     }
 
     .avatar {
       width: 5em;
       height: 5em;
       border-radius: 50%;
-      border: 0.1em solid #00b5f1;
-      /* Белый бордюр */
-      margin: 0.5em;
+      border: 0.15em solid #00b5f1;
+      margin: 0.1em;
       background: url("res/av.png") center/cover no-repeat;
       box-shadow: 0.2em 0.2em 0.5em black;
-      /* Тень вокруг аватара */
     }
 
     h1 {
-      margin: 0.5em;
+      margin-bottom: 1.0em;
       font-size: 1.2em;
       text-shadow: 0.1em 0.1em 0.3em black;
+    }
+
+    h2 {
+      margin: 0.2em;
+      font-size: 1.0em;
+
+      text-shadow:
+        -1px -1px #000,
+        0 1px 0 #00b5f1;
+      color: #00445b;
+      transition: all 1s;
+
+      /* background-color: #00b5f1; */
     }
 
     p {
@@ -56,41 +66,25 @@
       display: inline-flex;
       /* Используем flexbox для выравнивания иконки и текста */
       align-items: center;
-      /* Выравнивание содержимого по вертикали */
       justify-content: flex-start;
-      /* Выравнивание содержимого по горизонтали */
       margin: 0.3em auto;
-      /* Центрирование кнопки */
       padding: 0.5em;
-      /* Отступы внутри кнопки */
       border-radius: 0.8em;
-      /* Скругленные углы */
-      border: 0.15em solid #00b5f1;
-      /* Полупрозрачный белый бордюр */
+      border: 0.1em solid #00b5f1;
       background: rgba(0, 0, 0, 0.6);
-      /* Фон кнопки */
       color: #00b5f1;
-      /* Цвет текста */
       text-decoration: none;
-      /* Убираем подчеркивание */
       font-weight: bold;
-      /* Жирный текст */
       transition: background 0.3s, box-shadow 0.3s;
-      /* Анимация при наведении */
       text-shadow: 0.1em 0.1em 0.3em black;
-      /* Тень текста */
       box-shadow: 0.1em 0.1em 0.3em black;
-      /* Тень кнопки */
       width: auto;
-      /* Автоматическая ширина */
       max-width: none;
-      /* Убираем ограничение ширины */
     }
 
     .link:hover {
       background: #00b5f1;
       color: #00445b;
-      border: 0.2em solid #00445b;
     }
 
     .icon {
@@ -106,23 +100,19 @@
     }
 
     .icon2 {
-      width: 2.6em;
-      /* Размер иконки */
       height: 1.3em;
       margin-right: 0.5em;
-      /* Отступ между иконкой и текстом */
       flex-shrink: 0;
-      /* Иконка не сжимается */
       vertical-align: middle;
-      /* Выравнивание с текстом */
     }
 
     footer {
       margin-top: 1em;
-      font-weight: bold;
+      color: #00b5f1;
+      /* font-weight: bold; */
       opacity: 0.8;
       font-size: 0.8em;
-      text-shadow: 0.1em 0.1em 0.3em black;
+      text-shadow: 0.1em 0.1em 0.1em black;
     }
 
     .button-group {
@@ -141,11 +131,11 @@
 
 <body>
   <div class="avatar"></div>
-  <!-- <h1>ALIS (Акустическая песня)</h1> -->
+  <h1> ALIS (Акустическая песня)</h1>
 
-  <h1>
-    Основной медиа-блог (зеркала)
-  </h1>
+  <h2>
+    Медиа-блог
+  </h2>
   <div class="button-group">
     <!-- Telegram -->
     <a href="https://t.me/alis1441" class="link">
@@ -157,14 +147,46 @@
     </a>
   </div>
 
-  <h1>
-    Разное
-  </h1>
+  <h2>
+    Видео
+  </h2>
   <div class="button-group">
     <!-- YouTube -->
     <a href="https://youtube.com/@alis1441" class="link">
       <img src="res/YouTube.png" class="icon">YouTube
     </a>
+    <!-- TikTok -->
+    <a href="https://tiktok.com/@alis1441" class="link">
+      <img src="res/TikTok.png" class="icon">TikTok
+    </a>
+    <!-- Instagram -->
+    <a href="https://instagram.com/@alis1441" class="link">
+      <img src="res/Instagram.png" class="icon">Instagram
+    </a>
+  </div>
+
+  <h2>
+    Аудио
+  </h2>
+  <div class="button-group">
+    <!-- Spotify -->
+    <a href="https://stihi.ru/alis1441" class="link">
+      <img src="res/spotify.png" class="icon2"></a>
+    <!-- Apple -->
+    <a href="https://stihi.ru/alis1441" class="link">
+      <img src="res/applemus.png" class="icon2"></a>
+    <!-- Яндекс -->
+    <a href="https://stihi.ru/alis1441" class="link">
+      <img src="res/ymus.png" class="icon2"></a>
+    <!-- VK Mus -->
+    <a href="https://stihi.ru/alis1441" class="link">
+      <img src="res/vkmus.png" class="icon2"></a>
+  </div>
+
+  <h2>
+    Тексты & Контакты
+  </h2>
+  <div class="button-group">
     <!-- Stihi -->
     <a href="https://stihi.ru/alis1441" class="link">
       <img src="res/Stihi.jpg" class="icon2"></a>
@@ -177,8 +199,7 @@
   </div>
 
   <footer>
-    Акустическая песня<br>
-    Алексей [ALIS] Лисицын<br>2025
+    © Алексей [ALIS] Лисицын, 2025 @ alis1441.ru
   </footer>
 </body>
 
