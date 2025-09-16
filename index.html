@@ -11,7 +11,7 @@
       background: url("res/grid10N.bmp");
       /* background-size: cover; */
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Lucida Console, Arial, sans-serif;
       color: #00b5f1;
       background-color: #00445b;
       display: flex;
@@ -20,7 +20,7 @@
       justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
-      padding: 20px 20px;
+      padding: 1em;
       position: relative;
       /* overflow: hidden; */
       overflow: auto;
@@ -28,78 +28,113 @@
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 5em;
+      height: 5em;
       border-radius: 50%;
-      border: 3px solid #00b5f1;
+      border: 0.1em solid #00b5f1;
       /* Белый бордюр */
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 0.5em;
       background: url("res/av.png") center/cover no-repeat;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+      box-shadow: 0.2em 0.2em 0.5em black;
       /* Тень вокруг аватара */
     }
 
     h1 {
-      margin: 10px 0;
-      font-size: 1.8em;
-      text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+      margin: 0.5em;
+      font-size: 1.2em;
+      text-shadow: 0.1em 0.1em 0.3em black;
     }
 
     p {
-      margin: 5px 0 20px;
+      margin: 1em;
       font-size: 1em;
       opacity: 0.9;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      text-shadow: 0.1em 0.1em 0.3em black;
     }
 
     .link {
-      display: block;
-      /* Flexbox для выравнивания иконки и текста */
-      text-align: center;
-      width: 90%;
-      max-width: 150px;
-      margin: 10px auto;
-      padding: 12px 12px 12px 20px;
+      display: inline-flex;
+      /* Используем flexbox для выравнивания иконки и текста */
+      align-items: center;
+      /* Выравнивание содержимого по вертикали */
+      justify-content: flex-start;
+      /* Выравнивание содержимого по горизонтали */
+      margin: 0.3em auto;
+      /* Центрирование кнопки */
+      padding: 0.5em;
       /* Отступы внутри кнопки */
-      border-radius: 8px;
-      border: 2px solid #00b5f1;
+      border-radius: 0.8em;
+      /* Скругленные углы */
+      border: 0.15em solid #00b5f1;
       /* Полупрозрачный белый бордюр */
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.6);
+      /* Фон кнопки */
       color: #00b5f1;
+      /* Цвет текста */
       text-decoration: none;
+      /* Убираем подчеркивание */
       font-weight: bold;
+      /* Жирный текст */
       transition: background 0.3s, box-shadow 0.3s;
-      text-shadow: 2px 2px 5px black;
-      box-shadow: 2px 2px 5px black;
+      /* Анимация при наведении */
+      text-shadow: 0.1em 0.1em 0.3em black;
+      /* Тень текста */
+      box-shadow: 0.1em 0.1em 0.3em black;
+      /* Тень кнопки */
+      width: auto;
+      /* Автоматическая ширина */
+      max-width: none;
+      /* Убираем ограничение ширины */
     }
 
     .link:hover {
-      background: rgba(0, 0, 0, 0.6);
-      box-shadow: 2px 2px 2px black;
+      background: #00b5f1;
+      color: #00445b;
+      border: 0.2em solid #00445b;
     }
 
     .icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
+      width: 1.3em;
+      /* Размер иконки */
+      height: 1.3em;
+      margin-right: 0.5em;
+      /* Отступ между иконкой и текстом */
       flex-shrink: 0;
+      /* Иконка не сжимается */
       vertical-align: middle;
+      /* Выравнивание с текстом */
     }
 
     .icon2 {
-      width: 48px;
-      height: 24px;
-      margin-right: 8px;
+      width: 2.6em;
+      /* Размер иконки */
+      height: 1.3em;
+      margin-right: 0.5em;
+      /* Отступ между иконкой и текстом */
       flex-shrink: 0;
+      /* Иконка не сжимается */
       vertical-align: middle;
+      /* Выравнивание с текстом */
     }
 
     footer {
-      margin-top: 20px;
+      margin-top: 1em;
+      font-weight: bold;
       opacity: 0.8;
-      font-size: 1em;
-      text-shadow: 2px 2px 2px black;
+      font-size: 0.8em;
+      text-shadow: 0.1em 0.1em 0.3em black;
+    }
+
+    .button-group {
+      display: flex;
+      /* Включаем Flexbox */
+      justify-content: center;
+      /* Центрируем кнопки по горизонтали */
+      gap: 0.5em;
+      /* Расстояние между кнопками */
+      /* Отступы сверху и снизу */
+      flex-wrap: wrap;
+      /* Перенос кнопок на следующую строку, если не помещаются */
     }
   </style>
 </head>
@@ -107,40 +142,43 @@
 <body>
   <div class="avatar"></div>
   <!-- <h1>ALIS (Акустическая песня)</h1> -->
+
   <h1>
-    Акустическая песня
+    Основной медиа-блог (зеркала)
   </h1>
-  <!-- stihi -->
-  <a href="https://stihi.ru/alis1441" class="link">
-    <img src="res/Stihi.jpg" class="icon2">Stihi.ru
-  </a>
-  <!-- telegram -->
-  <a href="https://t.me/alis1441" class="link">
-    <img src="res/Telegram.png" class="icon">Telegram
-  </a>
-  <!-- youtube -->
-  <a href="https://youtube.com/@alis1441" class="link">
-    <img src="res/Youtube.png" class="icon">YouTube
-  </a>
-  <!-- vk -->
-  <a href="https://vk.com/alis1441" class="link">
-    <img src="res/VK.png" class="icon">VKontakte</a>
-  <!-- mail -->
-  <script>
-    const user = "alis";
-    const domain = "alis1441.ru";
-    document.write('<a href="#" class="link" onclick="copyText(\'' + user + '@' + domain + '\')"> <img src="res/Mail.png" class="icon">E-mail</a>');
-  </script>
-  <script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Адрес скопирован: " + text);
-      });
-    }
-  </script>
+  <div class="button-group">
+    <!-- Telegram -->
+    <a href="https://t.me/alis1441" class="link">
+      <img src="res/Telegram.png" class="icon">Telegram
+    </a>
+    <!-- VKontakte -->
+    <a href="https://vk.com/alis1441" class="link">
+      <img src="res/VK.png" class="icon">VKontakte
+    </a>
+  </div>
+
+  <h1>
+    Разное
+  </h1>
+  <div class="button-group">
+    <!-- YouTube -->
+    <a href="https://youtube.com/@alis1441" class="link">
+      <img src="res/Youtube.png" class="icon">YouTube
+    </a>
+    <!-- Stihi -->
+    <a href="https://stihi.ru/alis1441" class="link">
+      <img src="res/Stihi.jpg" class="icon2"></a>
+    <!-- E-mail -->
+    <script>
+      const user = "alis";
+      const domain = "alis1441.ru";
+      document.write('<a href="#" class="link" onclick="copyText(\'' + user + '@' + domain + '\')"> <img src="res/Mail.png" class="icon">E-mail</a>');
+    </script>
+  </div>
 
   <footer>
-    Алексей [ALIS] Лисицын, 2025
+    Акустическая песня<br>
+    Алексей [ALIS] Лисицын<br>2025
   </footer>
 </body>
 
